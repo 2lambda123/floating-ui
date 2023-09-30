@@ -76,7 +76,10 @@ export function useFocus<RT extends ReferenceType = ReferenceType>(
     }
 
     function onDismiss(payload: DismissPayload) {
-      if (payload.type === 'referencePress' || payload.type === 'escapeKey') {
+      if (
+        payload.reason === 'reference-press' ||
+        payload.reason === 'escape-key'
+      ) {
         blockFocusRef.current = true;
       }
     }

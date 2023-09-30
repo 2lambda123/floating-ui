@@ -429,12 +429,7 @@ export function useHover<RT extends ReferenceType = ReferenceType>(
           clearTimeout(timeoutRef.current);
         },
         onMouseLeave(event) {
-          events.emit('dismiss', {
-            type: 'mouseLeave',
-            data: {
-              returnFocus: false,
-            },
-          });
+          events.emit('dismiss', {reason: 'mouseleave', returnFocus: false});
           closeWithDelay(event.nativeEvent, false);
         },
       },
