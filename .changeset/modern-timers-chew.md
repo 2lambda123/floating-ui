@@ -4,3 +4,11 @@
 
 feat(useDismiss): add `onDismiss` callback option that gets passed the event,
 reason, and other data for the dismissal
+
+```js
+const dismiss = useDismiss(context, {
+  onDismiss(event, {reason, ...otherData}) {
+    // ...
+  },
+});
+```

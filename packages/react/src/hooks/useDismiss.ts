@@ -68,6 +68,7 @@ export interface UseDismissProps {
     event: Event,
     payload: {
       reason: 'outside-press' | 'reference-press' | 'escape-key';
+      returnFocus: boolean | {preventScroll: boolean};
     }
   ): void;
 }
